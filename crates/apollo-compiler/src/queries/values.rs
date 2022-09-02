@@ -1573,6 +1573,11 @@ impl EnumValueDefinition {
         self.enum_value.as_ref()
     }
 
+    /// Get a reference to the enum value definition's description.
+    pub fn description(&self) -> Option<&str> {
+        self.description.as_deref()
+    }
+
     // Get a reference to SyntaxNodePtr of the current HIR node.
     pub fn ast_ptr(&self) -> &SyntaxNodePtr {
         &self.ast_ptr
