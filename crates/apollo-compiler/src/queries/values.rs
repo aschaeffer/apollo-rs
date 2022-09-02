@@ -973,8 +973,6 @@ impl Field {
 
     // Get a reference to field's type.
     pub fn ty(&self, db: &dyn Document) -> Option<Type> {
-        dbg!(&self.parent_obj);
-
         let def = db
             .find_type_system_definition_by_name(self.parent_obj.as_ref()?.to_string())?
             .field(self.name())?
